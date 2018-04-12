@@ -18,6 +18,11 @@ class Diffiehellman
     def ya
         return @ya=(@⍺**@xa)%p
     end
+    
+    def yb
+        return @yb=(@⍺**@xb)%p
+    end
+    
 end
 
 @test=Diffiehellman.new
