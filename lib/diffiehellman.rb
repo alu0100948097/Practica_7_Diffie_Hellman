@@ -71,4 +71,7 @@ end
     @test.xa=xa
     print "Introduzca el secreto xb: "
     xb=gets.chomp.to_i
-    @test.xb=xa
+    @test.xb=xb
+    print "Traza: p=#{@test.p}, ⍺=#{@test.⍺}, xa=#{@test.xa}, xb=#{@test.xb}, ya=#{@test.ya}, yb=#{@test.yb}, k=#{@test.k}"
+    puts
+    puts
