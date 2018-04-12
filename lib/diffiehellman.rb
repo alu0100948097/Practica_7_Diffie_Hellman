@@ -9,6 +9,9 @@ class Diffiehellman
         @⍺=0
         @xa=0
         @xb=0
+        @ya=0
+        @yb=0
+        @k=0
 	end
     
 end
