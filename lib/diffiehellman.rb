@@ -3,6 +3,7 @@ require 'colorize'
 class Diffiehellman
     
     attr_writer :p, :⍺, :xa, :xb
+    attr_reader :p, :⍺, :xa, :xb
     
     def initialize
         @p=0
