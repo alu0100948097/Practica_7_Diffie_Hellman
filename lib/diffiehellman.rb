@@ -23,6 +23,19 @@ class Diffiehellman
         return @yb=(@⍺**@xb)%p
     end
     
+    def k
+        k_a=0
+        k_b=0
+        k_a=(@yb**@xa)%@p
+        k_b=(@ya**@xb)%@p
+        if k_a==k_b
+            @k=k_a
+            return @k
+        else
+            puts "La clave compartida K no coincide".red
+        end
+    end
+    
 end
 
 @test=Diffiehellman.new
