@@ -15,6 +15,9 @@ class Diffiehellman
         @k=0
 	end
     
+    def ya
+        return @ya=(@⍺**@xa)%p
+    end
 end
 
 @test=Diffiehellman.new
