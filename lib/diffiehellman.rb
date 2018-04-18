@@ -36,6 +36,20 @@ class Diffiehellman
         end
     end
     
+    def primo(n)
+        contador=0
+        for i in 1..n
+            if(n%i==0)
+                contador+=1;
+            end
+        end
+        if (contador==2)
+            return true;
+        else
+            return false;
+        end
+    end
+    
 end
 
 @test=Diffiehellman.new
@@ -44,10 +58,12 @@ end
     puts
     print "Introduzca el número primo p: "
     p=gets.chomp.to_i
-    while p<=0
+    while p<=0 || @test.primo(p)==false
         system "clear"
         if p==0
             puts "El número primo no puede ser igual a 0".red
+        elsif @test.primo(p)==false
+            puts "El número primo no es primo".red
         else
             puts "El número primo no puede ser negativo".red
         end
@@ -58,9 +74,13 @@ end
     @test.p=p
     print "Introduzca alpha ⍺: "
     ⍺=gets.chomp.to_i
-    while ⍺>p
+    while ⍺>p || @test.primo(⍺)==false
         system "clear"
-        puts "El alpha ⍺ introducido es mayor a p".red
+        if ⍺>p
+            puts "El alpha ⍺ introducido es mayor a p".red
+        else
+            puts "El alpha ⍺ introducido no es primo".red
+        end
         puts
         print "Introduzca alpha ⍺: "
         ⍺=gets.chomp.to_i
